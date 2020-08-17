@@ -14,6 +14,19 @@ go get github.com/zedd3v/abck-go
 ## Usage
 
 ```go
+package main
+
+import (
+	"fmt"
+	abck "github.com/zedd3v/abck-go"
+)
+
+func main() {
+	fmt.Println(abck.GetCfDate()) // Equivalent of Date.now()
+}
+```
+
+```go
 func D3() int64
 
 func Getmr() string // Broken, make a pr if you find a fix
