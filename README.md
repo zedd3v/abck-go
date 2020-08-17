@@ -17,12 +17,12 @@ go get github.com/zedd3v/abck-go
 package main
 
 import (
-	"fmt"
-	abck "github.com/zedd3v/abck-go"
+  "fmt"
+  abck "github.com/zedd3v/abck-go"
 )
 
 func main() {
-	fmt.Println(abck.GetCfDate()) // Equivalent of Date.now()
+  fmt.Println(abck.GetCfDate()) // Equivalent of Date.now()
 }
 ```
 
