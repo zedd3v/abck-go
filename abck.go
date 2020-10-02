@@ -232,23 +232,23 @@ func floatToString(flt float64, precision int) string {
 }
 
 type ScreenData struct {
-	availWidth  int
-	availHeight int
-	width       int
-	height      int
-	innerWidth  int
-	innerHeight int
-	outerWidth  int
+	AvailWidth  int
+	AvailHeight int
+	Width       int
+	Height      int
+	InnerWidth  int
+	InnerHeight int
+	OuterWidth  int
 }
 
 type BrowserData struct {
-	lang       string
-	userAgent  string
-	screenData ScreenData
+	Lang       string
+	UserAgent  string
+	ScreenData ScreenData
 }
 
 func Gd(browser string, browserData BrowserData, startTimestamp int64, d3 int64) (string, error) {
-	userAgent := Uar(browserData.userAgent)
+	userAgent := Uar(browserData.UserAgent)
 	d := randomNumberFloat()
 	xagg := 0
 	psub := 0
@@ -272,17 +272,17 @@ func Gd(browser string, browserData BrowserData, startTimestamp int64, d3 int64)
 		userAgent,
 		xagg,
 		psub,
-		browserData.lang,
+		browserData.Lang,
 		plen,
 		Z1(startTimestamp),
 		d3,
-		browserData.screenData.availWidth,
-		browserData.screenData.availHeight,
-		browserData.screenData.width,
-		browserData.screenData.height,
-		browserData.screenData.innerWidth,
-		browserData.screenData.innerHeight,
-		browserData.screenData.outerWidth,
+		browserData.ScreenData.AvailWidth,
+		browserData.ScreenData.AvailHeight,
+		browserData.ScreenData.Width,
+		browserData.ScreenData.Height,
+		browserData.ScreenData.InnerWidth,
+		browserData.ScreenData.InnerHeight,
+		browserData.ScreenData.OuterWidth,
 		bd,
 		Ab(userAgent),
 		floatToString(d, 16)[0:11]+floatToString(math.Floor(1000*d/2), -1),
