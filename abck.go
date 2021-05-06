@@ -224,7 +224,7 @@ func GetType(t string) int {
 }
 
 func Z1(startTimestamp int64) int64 {
-	return startTimestamp / 2016 * 2016
+	return startTimestamp / (2016 * 2016)
 }
 
 func floatToString(flt float64, precision int) string {
